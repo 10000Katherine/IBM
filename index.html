@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="nav-left">
+        <div class="profile_name">
+          Jane Doe
+        </div>
+        <div class="contact_info">
+          <img src="icons/envelope.png" alt="email" />
+          jdoe@jeemail.com
+        </div>
+        <div class="contact_info">
+          <img src="icons/phone.png" alt="phone" />
+          +13456764598
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="#about-me" class="topmenu">About Me</a>
+        <a href="#skills" class="topmenu">Skills</a>
+        <a href="#projects" class="topmenu">Projects</a>
+        <a href="#recommendations" class="topmenu">Recommendations</a>
+      </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <div class="intro">
+        <div class="greeting">
+          <h1>Hi, I'm Jane Doe! <span class="wave">👋</span></h1>
+          <p>
+            I am a full stack developer with 2 years of experience in both application
+            and presentation layers. I have worked on applications and microservices
+            deployed on IBM Cloud. I am an avid user of IBM Watson Services and have
+            worked on Watson Assistant, NLU, Sentiment analyzer to name a few.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="images/about_me.png" alt="About me image" class="about-image" />
+        <div class="about-text">
+          <p>
+            I am a web developer with a passion for creating interactive and responsive websites.
+            I have experience working with HTML, CSS, JavaScript, and various frontend and backend frameworks.
+            I enjoy solving complex problems and learning new skills.
+          </p>
+          <p>
+            When I'm not coding, I enjoy hiking, reading books, and exploring new technologies.
+            I believe in continuous learning and always strive to improve my skills to deliver the best results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skills-card">
+          <img src="icons/html.png" alt="HTML icon" />
+          <h3>HTML</h3>
+          <p>2 years experience</p>
+        </div>
+        <div class="skills-card">
+          <img src="icons/js.png" alt="JavaScript icon" />
+          <h3>JavaScript</h3>
+          <p>1.5 years experience</p>
+        </div>
+        <div class="skills-card">
+          <img src="icons/java.png" alt="Java icon" />
+          <h3>Java</h3>
+          <p>.5 years experience</p>
+        </div>
+        <div class="skills-card">
+          <img src="icons/react.png" alt="React icon" />
+          <h3>React</h3>
+          <p>1 year experience</p>
+        </div>
+        <div class="skills-card">
+          <img src="icons/node.png" alt="Node.js icon" />
+          <h3>Node.js</h3>
+          <p>1 year experience</p>
+        </div>
+        <div class="skills-card">
+          <img src="icons/css.png" alt="CSS icon" />
+          <h3>CSS</h3>
+          <p>2 years experience</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container">
+      <h2>Projects</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <h3>Chatbot</h3>
+          <ul>
+            <li>Developed a secure website integrated with chatbot for an automobile client using HTML, CSS, JavaScript and IBM Watson Assistant</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>Sentiment Analyzer</h3>
+          <ul>
+            <li>Developed and deployed a sentiment analyzer for the box reviews section of an eCommerce platform using IBM NLU</li>
+          </ul>
+        </div>
+        <div class="project-card">
+          <h3>Fashion Website</h3>
+          <ul>
+            <li>Created a styled multi-page website for a new player in the fashion industry and integrated it with a shopping cart, using stripe for payment gateway</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section id="recommendations" class="container">
+      <h2>Recommendations</h2>
+      <div class="recommendations-container">
+        <div class="recommendation">
+          <p>" Jane is a very quick learner and quickly grasps key concepts of Web development. She got a great attitude & she is an excellent team player. She has a curious mind and asks the right question. She takes initiative within a team and has potentials to lead the team. "</p>
+        </div>
+        <div class="recommendation">
+          <p>" Working with Jane has been an awesome experience. She is highly knowledgable and always goes the extra step to make sure everything is right. For any future projects that need her expertise I would definitely want to work with her again. "</p>
+        </div>
+        <div class="recommendation">
+          <p>" I had worked along with Jane during the initial phase of our venture which needed Web development. She is a committed resource who has in depth knowledge about the domain. She will be an asset for any organisation! "</p>
+        </div>
+      </div>
+
+      <!-- Recommendation Form -->
+      <div class="recommendation-form">
+        <h3>Leave a Recommendation</h3>
+        <form id="recommendation-form">
+          <label for="name">Name (Optional):</label>
+          <input type="text" id="name" name="name" placeholder="Name (Optional)">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+          <button type="button" id="recommend_btn" onclick="addRecommendation()">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close-btn" onclick="showPopup(false)">&times;</span>
+        <p>Thank you for your recommendation! It has been added.</p>
+      </div>
+    </div>
+
+    <!-- Scroll to top -->
+    <div class="scroll-to-top">
+      <a href="#home">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </a>
+    </div>
+  </body>
+</html>

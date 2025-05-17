@@ -1,0 +1,520 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding: 2rem 4rem;
+  scroll-margin-top: 80px;
+}
+
+h1, h2, h3 {
+  color: #5e17eb;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5e17eb;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.profile_name {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+  padding: 0 10px;
+}
+
+.contact_info {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.contact_info img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.topmenu {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+}
+
+.topmenu:hover {
+  color: white;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+/* Home Section */
+#home {
+  background-color: #f9f9f9;
+  padding: 2rem 2rem;
+  min-height: calc(100vh - 80px);
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.greeting {
+  flex: 1;
+}
+
+.greeting h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+  10% { transform: rotate(14.0deg) }
+  20% { transform: rotate(-8.0deg) }
+  30% { transform: rotate(14.0deg) }
+  40% { transform: rotate(-4.0deg) }
+  50% { transform: rotate(10.0deg) }
+  60% { transform: rotate( 0.0deg) }
+  100% { transform: rotate( 0.0deg) }
+}
+
+/* About Me */
+#about-me {
+  background-color: white;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-image {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* Skills */
+#skills {
+  background-color: #f9f9f9;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+}
+
+.skills-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.skills-card h3 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.skills-card p {
+  margin: 0;
+  color: #666;
+}
+
+/* Projects */
+#projects {
+  background-color: white;
+}
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #5e17eb;
+  padding-bottom: 0.5rem;
+}
+
+.project-card ul {
+  padding-left: 1.5rem;
+}
+
+/* Recommendations */
+#recommendations {
+  background-color: #f9f9f9;
+}
+
+.recommendations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recommendation {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation p {
+  margin: 0;
+  font-style: italic;
+}
+
+.recommendation-form {
+  margin-top: 3rem;
+}
+
+.recommendation-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.recommendation-form label {
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-form input,
+.recommendation-form textarea {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.recommendation-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #5e17eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.recommendation-form button:hover {
+  background-color: #4a11c0;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #5e17eb;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+  
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .nav-left {
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  .nav-right {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .recommendations-container {
+    grid-template-columns: 1fr;
+  }
+}container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.recommendation {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation p {
+  margin: 0;
+  font-style: italic;
+}
+
+.recommendation-form {
+  margin-top: 3rem;
+}
+
+.recommendation-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.recommendation-form label {
+  margin-bottom: 0.5rem;
+}
+
+.recommendation-form input,
+.recommendation-form textarea {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.recommendation-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #5e17eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+}
+
+.recommendation-form button:hover {
+  background-color: #4a11c0;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Scroll to top */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #5e17eb;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-to-top svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 2rem;
+  }
+  
+  nav {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+  
+  .profile_name {
+    margin-bottom: 1rem;
+  }
+  
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .intro img {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  #about-me {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .recommendations-container {
+    grid-template-columns: 1fr;
+  }
+}
